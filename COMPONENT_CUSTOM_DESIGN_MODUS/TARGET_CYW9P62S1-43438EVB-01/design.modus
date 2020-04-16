@@ -100,7 +100,7 @@
                     </Personality>
                 </Block>
                 <Block location="ioss[0].port[1].pin[0]">
-                    <Alias value="CYBSP_CSD_TX"/>
+                    <Alias value="CYBSP_CSD_RX"/>
                     <Personality template="mxs40pin" version="1.1">
                         <Param id="DriveModes" value="CY_GPIO_DM_ANALOG"/>
                         <Param id="initialState" value="1"/>
@@ -329,12 +329,6 @@
                         <Param id="divider" value="1"/>
                     </Personality>
                 </Block>
-                <Block location="srss[0].clock[0].hfclk[1]">
-                    <Personality template="mxs40hfclk" version="1.1">
-                        <Param id="sourceClockNumber" value="1"/>
-                        <Param id="divider" value="1"/>
-                    </Personality>
-                </Block>
                 <Block location="srss[0].clock[0].hfclk[2]">
                     <Personality template="mxs40hfclk" version="1.1">
                         <Param id="sourceClockNumber" value="0"/>
@@ -515,6 +509,9 @@
                         <Port name="ioss[0].port[7].pin[2].analog[0]"/>
                     </Arm>
                     <Arm>
+                        <Port name="ioss[0].port[1].pin[0].analog[0]"/>
+                    </Arm>
+                    <Arm>
                         <Port name="ioss[0].port[8].pin[1].analog[0]"/>
                     </Arm>
                     <Arm>
@@ -522,9 +519,6 @@
                     </Arm>
                     <Arm>
                         <Port name="ioss[0].port[8].pin[2].analog[0]"/>
-                    </Arm>
-                    <Arm>
-                        <Port name="ioss[0].port[1].pin[0].analog[0]"/>
                     </Arm>
                     <Arm>
                         <Port name="ioss[0].port[8].pin[3].analog[0]"/>
@@ -544,7 +538,7 @@
                 </Mux>
             </Netlist>
         </Device>
-        <Device mpn="CYW4343WKUBG">
+        <Device mpn="CYW43438KUBG">
             <BlockConfig/>
             <Netlist/>
         </Device>

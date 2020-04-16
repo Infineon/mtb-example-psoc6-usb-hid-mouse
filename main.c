@@ -48,7 +48,7 @@
 /*******************************************************************************
 * Macros
 ********************************************************************************/
-#define MOUSE_ENDPOINT      (1u)
+#define MOUSE_ENDPOINT      (1u)    /* Based on USB HID descriptor */
 #define MOUSE_DATA_LEN      (3U)
 #define CURSOR_STEP_PLUS    ((uint8_t)  (5))
 #define CURSOR_STEP_MINUS   ((uint8_t) (-5))
@@ -163,7 +163,7 @@ int main(void)
                                    CY_USB_DEV_WAIT_FOREVER, &usb_devContext);
 
         /* Wait for 10 ms */
-    	Cy_SysLib_Delay(10uL);
+    	cyhal_system_delay_ms(10uL);
     }
 }
 

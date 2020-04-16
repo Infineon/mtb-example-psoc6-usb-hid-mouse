@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Design version="12" xmlns="http://cypress.com/xsd/cydesignfile_v3">
-    <ToolInfo version="1.0.0"/>
+    <ToolInfo version="2.1.0.1154"/>
     <Devices>
         <Device mpn="CY8C624ABZI-D44">
             <BlockConfig>
@@ -310,9 +310,12 @@
                     </Personality>
                 </Block>
                 <Block location="srss[0].clock[0].fll[0]">
-                    <Personality template="mxs40fll" version="1.0">
+                    <Personality template="mxs40fll" version="2.0">
                         <Param id="configuration" value="auto"/>
-                        <Param id="desiredFrequency" value="100.000"/>
+                        <Param id="desiredFrequency" value=""/>
+                        <Param id="multiplier" value=""/>
+                        <Param id="reference" value=""/>
+                        <Param id="tolerance" value=""/>
                     </Personality>
                 </Block>
                 <Block location="srss[0].clock[0].hfclk[0]">
@@ -390,7 +393,7 @@
                     </Personality>
                 </Block>
                 <Block location="srss[0].clock[0].pll[1]">
-                    <Personality template="mxs40pll" version="1.0">
+                    <Personality template="mxs40pll" version="2.0">
                         <Param id="lowFrequencyMode" value="false"/>
                         <Param id="configuration" value="auto"/>
                         <Param id="desiredFrequency" value="48.000"/>
@@ -540,6 +543,5 @@
             <Netlist/>
         </Device>
     </Devices>
-    <Libraries/>
     <ConfiguratorData/>
 </Design>

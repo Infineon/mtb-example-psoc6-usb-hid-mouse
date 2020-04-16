@@ -7,7 +7,7 @@
 #
 ################################################################################
 # \copyright
-# Copyright 2018-2019 Cypress Semiconductor Corporation
+# Copyright 2018-2020 Cypress Semiconductor Corporation
 # SPDX-License-Identifier: Apache-2.0
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -32,7 +32,7 @@
 TARGET=CY8CPROTO-062-4343W
 
 # Name of application (used to derive name of final linked file).
-APPNAME=mtb-example-psoc6-usb-hid
+APPNAME=mtb-example-psoc6-usb-hid-mouse
 
 # Name of toolchain to use. Options include:
 #
