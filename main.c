@@ -45,6 +45,7 @@
 #include "cy_usb_dev.h"
 #include "cycfg_usbdev.h"
 
+
 /*******************************************************************************
 * Macros
 ********************************************************************************/
@@ -55,12 +56,14 @@
 #define CURSOR_STEP_POS     (1U)
 #define CURSOR_DELAY        (128U)
 
+
 /*******************************************************************************
 * Function Prototypes
 ********************************************************************************/
 static void usb_high_isr(void);
 static void usb_medium_isr(void);
 static void usb_low_isr(void);
+
 
 /*******************************************************************************
 * Global Variables
@@ -139,7 +142,8 @@ int main(void)
     NVIC_EnableIRQ(usb_low_interrupt_cfg.intrSrc);
 
     /* Make device appear on the bus. This function call is blocking, 
-       it waits till the device enumerates */
+     * it waits untill the device enumerates 
+     */
     Cy_USB_Dev_Connect(true, CY_USB_DEV_WAIT_FOREVER, &usb_devContext);
 
     for(;;)
@@ -163,9 +167,10 @@ int main(void)
                                    CY_USB_DEV_WAIT_FOREVER, &usb_devContext);
 
         /* Wait for 10 ms */
-    	cyhal_system_delay_ms(10uL);
+        cyhal_system_delay_ms(10uL);
     }
 }
+
 
 /***************************************************************************
 * Function Name: usb_high_isr
@@ -213,5 +218,6 @@ static void usb_low_isr(void)
                                Cy_USBFS_Dev_Drv_GetInterruptCauseLo(CYBSP_USBDEV_HW), 
                                &usb_drvContext);
 }
+
 
 /* [] END OF FILE */
