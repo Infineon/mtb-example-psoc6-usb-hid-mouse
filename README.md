@@ -1,3 +1,4 @@
+**This repository is deprecated.** Use the ModusToolbox&trade; example available here - https://github.com/Infineon/mtb-example-usb-device-hid-mouse
 # PSoC&trade; 6 MCU: USB HID mouse application
 
 This example demonstrates how to configure the USB block in a PSoC&trade; 6 MCU as a Human Interface Device (HID). The device enumerates as a 3-button mouse.
